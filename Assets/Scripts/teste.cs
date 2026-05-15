@@ -5,7 +5,7 @@ using UnityEngine;
 public class Movimentacao : MonoBehaviour
 {
     [Header("Configurações de Movimento")]
-    public float velocidade = 5f;
+    public float velocidade = 10f;
 
     private Rigidbody2D rb; // Mude para Rigidbody se estiver em 3D
     private Vector2 direcaoMovimento;
