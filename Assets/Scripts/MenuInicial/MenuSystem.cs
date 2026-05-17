@@ -8,6 +8,7 @@ public class MenuSystem : MonoBehaviour
     public void Jogar()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        Debug.Log("Jogando");
     }
 
     public void Sair()
