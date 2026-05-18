@@ -6,7 +6,7 @@ public class Player : MonoBehaviour
 
     [SerializeField] public float speed;
 
-    [SerializeField] private Animator animator;
+    [SerializeField] public Animator animator;
     private Rigidbody2D rigidbody2D;
     private SpriteRenderer spriteRenderer;  
 
