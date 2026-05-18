@@ -5,11 +5,11 @@ using UnityEngine;
 public class MosquitoVerdeController : MonoBehaviour
 {
     [SerializeField] public float _movespeedMosquito;
-    [SerializeField] public Rigidbody2D _rigidbody2DMosquito;
-    [SerializeField] public Vector2 _mosquitoDirection;
+    public Rigidbody2D _rigidbody2DMosquito;
+    public Vector2 _mosquitoDirection;
 
-    [SerializeField] public DetectionController _detectionControllerArea;
-    [SerializeField] public SpriteRenderer _spriteRenderer;
+    public DetectionController _detectionControllerArea;
+    public SpriteRenderer _spriteRenderer;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
