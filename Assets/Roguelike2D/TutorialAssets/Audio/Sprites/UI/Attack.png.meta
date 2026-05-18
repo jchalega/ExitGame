@@ -1,10 +1,17 @@
 fileFormatVersion: 2
-guid: 0187514e78e25254b8c3fe5387cd58b4
+guid: f59b6f1cccc714c4d867407a30f8b974
+AssetOrigin:
+  serializedVersion: 1
+  productId: 299017
+  packageName: 2D Roguelike | Complete Project
+  packageVersion: 1.0.1
+  assetPath: Assets/Roguelike2D/TutorialAssets/Sprites/UI/Attack.png
+  uploadId: 857054
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 3824146322478515066
-    second: hourglass_0
+      213: -3753825769889500098
+    second: sword_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -113,12 +120,12 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: hourglass_0
+      name: sword_0
       rect:
         serializedVersion: 2
-        x: 21
+        x: 9
         y: 9
-        width: 86
+        width: 110
         height: 110
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -128,8 +135,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: a73c270b1d8121530800000000000000
-      internalID: 3824146322478515066
+      spriteID: e347705d95bb7ebc0800000000000000
+      internalID: -3753825769889500098
       vertices: []
       indices: 
       edges: []
@@ -148,16 +155,9 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      hourglass_0: 3824146322478515066
+      sword_0: -3753825769889500098
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
   assetBundleName: 
   assetBundleVariant: 
-AssetOrigin:
-  serializedVersion: 1
-  productId: 299017
-  packageName: 2D Roguelike | Complete Project
-  packageVersion: 1.0.1
-  assetPath: Assets/Roguelike2D/TutorialAssets/Sprites/UI/Speed.png
-  uploadId: 857054
