@@ -6,15 +6,15 @@ public class TriggerDamage : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Player"))
         {
-            HeartSystem heart =
-                collision.gameObject.GetComponent<HeartSystem>();
+            PlayerHealth playerHealth =
+                collision.gameObject.GetComponent<PlayerHealth>();
 
             Player player =
                 collision.gameObject.GetComponent<Player>();
 
-            if (heart != null)
+            if (playerHealth != null)
             {
-                heart._vida--;
+                playerHealth.vida--;
             }
 
             if (player != null)

@@ -16,6 +16,7 @@ GameObject:
   - component: {fileID: 7852523080809626012}
   - component: {fileID: 1011885687577806571}
   - component: {fileID: 2408959405974217674}
+  - component: {fileID: 1563913376276578932}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -204,7 +205,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6842469732893959159}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d9ba9e8ef2651864d8ddff4c0d5c33f6, type: 3}
   m_Name: 
@@ -231,3 +232,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ScoreSystem
   hamburgers: 0
+--- !u!114 &1563913376276578932
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6842469732893959159}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 12db68a1cfbe5924289d6b29248c01e3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PlayerHealth
+  vida: 5
+  vidaMaxima: 5
