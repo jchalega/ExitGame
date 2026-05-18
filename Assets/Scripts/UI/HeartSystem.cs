@@ -1,4 +1,6 @@
+using UnityEditor;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class HeartSystem : MonoBehaviour
@@ -50,6 +52,7 @@ public class HeartSystem : MonoBehaviour
         {
             GetComponent<Player>().enabled = false;
             Destroy(gameObject, 0.5f);
+            //SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex - 1);
         }
     }
 }

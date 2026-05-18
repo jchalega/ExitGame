@@ -1,16 +1,26 @@
 using UnityEngine;
 
 public class TriggerDamage : MonoBehaviour
-    
 {
-    public HeartSystem heart;
-    public Player player;
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if(collision.gameObject.tag == "Player")
+        if (collision.gameObject.CompareTag("Player"))
         {
-            heart._vida--;
-            player.animator.SetTrigger("takeDamage");
+            HeartSystem heart =
+                collision.gameObject.GetComponent<HeartSystem>();
+
+            Player player =
+                collision.gameObject.GetComponent<Player>();
+
+            if (heart != null)
+            {
+                heart._vida--;
+            }
+
+            if (player != null)
+            {
+                player.animator.SetTrigger("takeDamage");
+            }
         }
     }
 }
