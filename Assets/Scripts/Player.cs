@@ -8,7 +8,9 @@ public class Player : MonoBehaviour
 
     [SerializeField] public Animator animator;
     private Rigidbody2D rigidbody2D;
-    private SpriteRenderer spriteRenderer;  
+    private SpriteRenderer spriteRenderer;
+
+   
 
     void Start()
     {
@@ -24,6 +26,30 @@ public class Player : MonoBehaviour
 
     // Update is called once per frame
     private void FixedUpdate()
+    {
+
+
+        moveLogic();
+
+
+
+
+    }
+
+   
+    private void Attack()
+    {
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            animator.SetTrigger("Attack");
+            return;
+        }
+        
+                
+        
+    }
+
+    private void moveLogic()
     {
         Vector2 direction = new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical"));
         rigidbody2D.linearVelocity = direction.normalized * speed;
@@ -44,22 +70,5 @@ public class Player : MonoBehaviour
         {
             animator.SetBool("isRunning", false);
         }
-        
-      
-        
-            
-        
-    }
-
-    private void Attack()
-    {
-        if (Input.GetKeyDown(KeyCode.Space))
-        {
-            animator.SetTrigger("Attack");
-            return;
-        }
-        
-                
-        
     }
 }
