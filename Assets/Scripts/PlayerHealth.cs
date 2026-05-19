@@ -1,38 +1,60 @@
 using UnityEngine;
-using System;
-using UnityEngine.SceneManagement;
 
 public class PlayerHealth : MonoBehaviour
 {
-     public int vida;
-    [SerializeField] public int vidaMaxima;
-    public bool isPaused =false;
+    public int vida;
 
-    private void Update()
+    [SerializeField]
+    public int vidaMaxima;
+
+    public AudioClip damageSound;
+
+    public AudioClip deathSound;
+
+    private AudioSource sfxAudio;
+
+    private bool morreu = false;
+
+    void Start()
     {
-        DeadState();
+        sfxAudio = GetComponent<AudioSource>();
     }
+
     public void TakeDamage(int damage)
     {
+        if (morreu)
+            return;
+
         vida -= damage;
+
         Debug.Log("Vida atual: " + vida);
 
+        // SOM DE DANO
+        if (damageSound != null)
+        {
+            sfxAudio.PlayOneShot(damageSound);
+        }
+
         if (vida <= 0)
         {
-            GetComponent<Player>().enabled = false;
-
-            Destroy(gameObject, 0.5f);
+            Death();
         }
     }
-    public void DeadState()
+
+    void Death()
     {
-        if (vida <= 0)
+        morreu = true;
+
+        vida = 0;
+
+        // SOM DE MORTE
+        if (deathSound != null)
         {
-            GetComponent<Player>().enabled = false;
-            Destroy(gameObject, 0f);
-            //SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex - 1);
-            Time.timeScale = 0;
-            isPaused = true;
+            sfxAudio.PlayOneShot(deathSound);
         }
+
+        GetComponent<Player>().enabled = false;
+
+        Destroy(gameObject, 2f);
     }
 }

@@ -3,6 +3,13 @@ using UnityEngine;
 public class HamburgerCollectible : MonoBehaviour
 {
     public int value = 1;
+    public AudioClip collectSound;
+    private AudioSource audioSource;
+
+    private void Start()
+    {
+        audioSource = GetComponent<AudioSource>();  
+    }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
@@ -16,7 +23,10 @@ public class HamburgerCollectible : MonoBehaviour
                 score.AddHamburger(value);
             }
 
-            Destroy(gameObject);
+            GetComponent<Collider2D>().enabled = false;
+            audioSource.PlayOneShot(collectSound);
+
+            Destroy(gameObject, 0.3f);
         }
     }
 }

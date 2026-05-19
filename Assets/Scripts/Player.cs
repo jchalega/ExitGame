@@ -9,14 +9,15 @@ public class Player : MonoBehaviour
     [SerializeField] public Animator animator;
     private Rigidbody2D rigidbody2D;
     private SpriteRenderer spriteRenderer;
+    private AudioSource footstepAudio;
 
-   
 
     void Start()
     {
         animator = GetComponent<Animator>();
         rigidbody2D = GetComponent<Rigidbody2D>();
         spriteRenderer = GetComponent<SpriteRenderer>();
+        footstepAudio = GetComponent<AudioSource>();
     }
 
     private void Update()
@@ -56,6 +57,10 @@ public class Player : MonoBehaviour
         if (direction != Vector2.zero)
         {
             animator.SetBool("isRunning", true);
+            if (!footstepAudio.isPlaying)
+            {
+                footstepAudio.Play();
+            }
             if (direction.x > 0)
             {
                 spriteRenderer.flipX = false;
@@ -69,6 +74,11 @@ public class Player : MonoBehaviour
         else
         {
             animator.SetBool("isRunning", false);
+
+            if (footstepAudio.isPlaying)
+            {
+                footstepAudio.Stop();
+            }
         }
     }
 }

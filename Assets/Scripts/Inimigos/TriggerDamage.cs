@@ -14,7 +14,7 @@ public class TriggerDamage : MonoBehaviour
 
             if (playerHealth != null)
             {
-                playerHealth.vida--;
+                playerHealth.TakeDamage(1);
             }
 
             if (player != null)
