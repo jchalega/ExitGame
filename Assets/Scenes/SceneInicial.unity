@@ -3934,10 +3934,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::npc
   caixaDialogo: {fileID: 239857133}
   textoDialogo: {fileID: 1592254227}
-  falaNPC: 'Precisamos de mais suprimentos urgente.
-
-    Suba as escadas e procure
-    alguns lanches. Nao morra!!'
+  falaNPC: 
   velocidade: 0.03
 --- !u!61 &652699609
 BoxCollider2D:
