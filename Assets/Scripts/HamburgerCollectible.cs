@@ -5,10 +5,12 @@ public class HamburgerCollectible : MonoBehaviour
     public int value = 1;
     public AudioClip collectSound;
     private AudioSource audioSource;
+    private GameManager gameManager;
 
     private void Start()
     {
-        audioSource = GetComponent<AudioSource>();  
+        audioSource = GetComponent<AudioSource>();
+        gameManager = FindFirstObjectByType<GameManager>();
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -25,7 +27,7 @@ public class HamburgerCollectible : MonoBehaviour
 
             GetComponent<Collider2D>().enabled = false;
             audioSource.PlayOneShot(collectSound);
-
+            gameManager.CollectHamburger();
             Destroy(gameObject, 0.3f);
         }
     }
