@@ -17,6 +17,9 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Scenes/MenuInicial.unity
     guid: 2a2fbddedd7ed794db94abe7804681ef
+  - enabled: 1
+    path: Assets/Scenes/TelaFinal.unity
+    guid: 279ee4779dbb00c4ea0e986b5bfe9650
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
   m_UseUCBPForAssetBundles: 0

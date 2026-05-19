@@ -14,15 +14,19 @@ public class GameManager : MonoBehaviour
         portal.SetActive(false);
         mensagemPortal.SetActive(false);
     }
-
+  
     public void CollectHamburger()
     {
         hamburgersCollected++;
+        Debug.Log(hamburgersCollected);
+
 
         if (hamburgersCollected >= totalHamburgers)
         {
             portal.SetActive(true);
             mensagemPortal.SetActive(true);
+
+            Debug.Log("PORTAL LIBERADO");
         }
     }
 }

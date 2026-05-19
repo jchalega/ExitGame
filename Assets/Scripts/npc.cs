@@ -14,23 +14,27 @@ public class npc : MonoBehaviour
 
     private Coroutine animacaoTexto;
 
+    private bool dialogoAberto = false;
+
     private void Start()
     {
-        falaNPC = "Precisamos de mais suprimentos urgente.\nSuba as escadas e procure alguns lanches. Nao morra!!";
-
-        textoDialogo.text = "";
         caixaDialogo.SetActive(false);
     }
 
     private void OnTriggerEnter2D(Collider2D other)
     {
         if (!other.CompareTag("Player")) return;
-        
+
+        if (dialogoAberto) return;
+
+        dialogoAberto = true;
 
         caixaDialogo.SetActive(true);
 
         if (animacaoTexto != null)
+        {
             StopCoroutine(animacaoTexto);
+        }
 
         animacaoTexto = StartCoroutine(TypeText(falaNPC));
     }
@@ -39,12 +43,17 @@ public class npc : MonoBehaviour
     {
         if (!other.CompareTag("Player")) return;
 
+        dialogoAberto = false;
+
         caixaDialogo.SetActive(false);
 
         if (animacaoTexto != null)
+        {
             StopCoroutine(animacaoTexto);
-    }
+        }
 
+        textoDialogo.text = "";
+    }
 
     IEnumerator TypeText(string texto)
     {
@@ -53,6 +62,7 @@ public class npc : MonoBehaviour
         foreach (char letra in texto)
         {
             textoDialogo.text += letra;
+
             yield return new WaitForSeconds(velocidade);
         }
     }

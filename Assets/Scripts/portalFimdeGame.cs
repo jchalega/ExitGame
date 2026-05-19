@@ -3,13 +3,13 @@ using UnityEngine.SceneManagement;
 
 public class protalFimdeGame : MonoBehaviour
 {
-    public string novaFase;
+    private string TelaFinal;
 
     private void OnTriggerEnter2D(Collider2D other)
     {
         if (other.CompareTag("Player"))
         {
-            SceneManager.LoadScene(novaFase);
+            SceneManager.LoadScene("TelaFinal");
         }
     }
 }
