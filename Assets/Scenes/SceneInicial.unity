@@ -2811,12 +2811,12 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1592254226}
-  - {fileID: 1269670898}
+  - {fileID: 708949262}
   m_Father: {fileID: 1355347056}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -0.000030517578, y: -168.34}
+  m_AnchoredPosition: {x: 0, y: -168.33997}
   m_SizeDelta: {x: -0.000061035, y: -336.67}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &239857135
@@ -3901,6 +3901,60 @@ Transform:
   - {fileID: 92104745}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &708949261
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 708949262}
+  - component: {fileID: 708949263}
+  m_Layer: 5
+  m_Name: GameObject
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &708949262
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 708949261}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1748994781}
+  - {fileID: 1269670898}
+  m_Father: {fileID: 239857134}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &708949263
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 708949261}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8dfa4c178b7677545b8d1ac998098921, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::npc
+  caixaDialogo: {fileID: 239857133}
+  textoDialogo: {fileID: 1592254227}
+  falaNPC: 
+  velocidade: 0.03
 --- !u!1001 &872435898
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4373,18 +4427,17 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1269670897}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 1748994781}
-  m_Father: {fileID: 239857134}
+  m_Children: []
+  m_Father: {fileID: 708949262}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.404}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -315.3, y: -12.3}
-  m_SizeDelta: {x: 74.0584, y: 52.2668}
+  m_AnchoredPosition: {x: -758.7, y: 218.5}
+  m_SizeDelta: {x: 218.8, y: 150.6}
   m_Pivot: {x: 0.65538025, y: 0.5}
 --- !u!114 &1269670899
 MonoBehaviour:
@@ -4627,6 +4680,7 @@ GameObject:
   - component: {fileID: 1592254226}
   - component: {fileID: 1592254228}
   - component: {fileID: 1592254227}
+  - component: {fileID: 1592254229}
   m_Layer: 5
   m_Name: Dialogo
   m_TagString: Untagged
@@ -4651,7 +4705,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 6.7362, y: -13.1259}
-  m_SizeDelta: {x: 418.9279, y: 89.7243}
+  m_SizeDelta: {x: 418.9279, y: 283.6}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1592254227
 MonoBehaviour:
@@ -4673,10 +4727,10 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Precisamos de mais suprimentos.\r\nSuba as escadas e procure alguns hamb\xFArgueres."
+  m_text: 
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: db06523ef7ac11d4f927854cec359ede, type: 2}
+  m_sharedMaterial: {fileID: 4946633856235619107, guid: db06523ef7ac11d4f927854cec359ede, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -4700,8 +4754,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 20
-  m_fontSizeBase: 20
+  m_fontSize: 49.26
+  m_fontSizeBase: 49.26
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -4753,6 +4807,27 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1592254225}
   m_CullTransparentMesh: 1
+--- !u!114 &1592254229
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1592254225}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8dfa4c178b7677545b8d1ac998098921, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::npc
+  caixaDialogo: {fileID: 239857133}
+  textoDialogo: {fileID: 1592254227}
+  falaNPC: 'Precisamos de mais suprimentos de maneira urgente.
+
+    Suba as escadas
+    e procure alguns lanches. Nao Morra!!
+
+'
+  velocidade: 0.03
 --- !u!1 &1748994780
 GameObject:
   m_ObjectHideFlags: 0
@@ -4778,17 +4853,17 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1748994780}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 1269670898}
+  m_Father: {fileID: 708949262}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 31.064, y: 43.4}
-  m_SizeDelta: {x: 136.1874, y: 34.3083}
+  m_AnchoredPosition: {x: -310.4, y: -4.5798264}
+  m_SizeDelta: {x: 1290.3, y: 699.5}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1748994782
 MonoBehaviour:
@@ -4810,10 +4885,10 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Rafael
+  m_text: Rafael Sonystinha
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: db06523ef7ac11d4f927854cec359ede, type: 2}
+  m_sharedMaterial: {fileID: 4946633856235619107, guid: db06523ef7ac11d4f927854cec359ede, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -4837,8 +4912,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 18
-  m_fontSizeBase: 18
+  m_fontSize: 46.2
+  m_fontSizeBase: 46.2
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -5457,11 +5532,8 @@ SceneRoots:
   - {fileID: 634491669}
   - {fileID: 1952257857}
   - {fileID: 876101773}
-<<<<<<< HEAD:Assets/Scenes/SceneInicial.unity
   - {fileID: 439617138}
   - {fileID: 183622676}
   - {fileID: 1355347056}
   - {fileID: 1281828081}
-=======
   - {fileID: 1036175079}
->>>>>>> ffd59a9220fd6be963cbb992b23d7d8e9fe0af0b:Assets/Scenes/SampleScene.unity

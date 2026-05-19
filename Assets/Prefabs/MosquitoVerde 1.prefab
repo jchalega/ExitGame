@@ -148,7 +148,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e9a6524dafa68ff418905009b15a82b4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::MosquitoVerdeController
-  _movespeedMosquito: 1.5
+  _movespeedMosquito: 1.2
   _rigidbody2DMosquito: {fileID: 0}
   _mosquitoDirection: {x: 0, y: 0}
   _detectionControllerArea: {fileID: 3876296494406912938}
