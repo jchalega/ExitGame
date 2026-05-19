@@ -1,4 +1,6 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
+using System.Collections;
 
 public class PlayerHealth : MonoBehaviour
 {
@@ -8,16 +10,25 @@ public class PlayerHealth : MonoBehaviour
     public int vidaMaxima;
 
     public AudioClip damageSound;
-
     public AudioClip deathSound;
 
     private AudioSource sfxAudio;
 
     private bool morreu = false;
 
+    [Header("GAME OVER")]
+    public GameObject gameOverPanel;
+
+    public string cenaBase = "SceneInicial";
+
     void Start()
     {
         sfxAudio = GetComponent<AudioSource>();
+
+        if (gameOverPanel != null)
+        {
+            gameOverPanel.SetActive(false);
+        }
     }
 
     public void TakeDamage(int damage)
@@ -55,6 +66,32 @@ public class PlayerHealth : MonoBehaviour
 
         GetComponent<Player>().enabled = false;
 
-        Destroy(gameObject, 2f);
+        Rigidbody2D rb = GetComponent<Rigidbody2D>();
+
+        if (rb != null)
+        {
+            rb.linearVelocity = Vector2.zero;
+        }
+
+        StartCoroutine(GameOverRoutine());
+    }
+
+    IEnumerator GameOverRoutine()
+    {
+        if (gameOverPanel != null)
+        {
+            gameOverPanel.SetActive(true);
+        }
+
+        SpriteRenderer sr = GetComponent<SpriteRenderer>();
+
+        if (sr != null)
+        {
+            sr.enabled = false;
+        }
+
+        yield return new WaitForSeconds(3f);
+
+        SceneManager.LoadScene(cenaBase);
     }
 }
