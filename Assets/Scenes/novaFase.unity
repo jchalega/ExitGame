@@ -312,6 +312,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: MosquitoVerde 1
       objectReference: {fileID: 0}
+    - target: {fileID: 4287588530952651600, guid: 830c6f4d87d799d4cbf97caeddc610a3, type: 3}
+      propertyPath: m_SortingOrder
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 8589994181243022446, guid: 830c6f4d87d799d4cbf97caeddc610a3, type: 3}
       propertyPath: m_LocalPosition.x
       value: -4.53212
@@ -869,6 +873,10 @@ PrefabInstance:
     - target: {fileID: 243590267965746907, guid: 830c6f4d87d799d4cbf97caeddc610a3, type: 3}
       propertyPath: m_Name
       value: MosquitoVerde 1 (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4287588530952651600, guid: 830c6f4d87d799d4cbf97caeddc610a3, type: 3}
+      propertyPath: m_SortingOrder
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 8589994181243022446, guid: 830c6f4d87d799d4cbf97caeddc610a3, type: 3}
       propertyPath: m_LocalPosition.x
@@ -3517,6 +3525,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: MosquitoVerde 1 (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 4287588530952651600, guid: 830c6f4d87d799d4cbf97caeddc610a3, type: 3}
+      propertyPath: m_SortingOrder
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 8589994181243022446, guid: 830c6f4d87d799d4cbf97caeddc610a3, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0.56
@@ -3737,6 +3749,10 @@ PrefabInstance:
     - target: {fileID: -8284852830561839668, guid: 987f7f97f40850442868a4be09a2edf5, type: 3}
       propertyPath: m_PlayOnAwake
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1395100071197471640, guid: 987f7f97f40850442868a4be09a2edf5, type: 3}
+      propertyPath: m_SortingOrder
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 1563913376276578932, guid: 987f7f97f40850442868a4be09a2edf5, type: 3}
       propertyPath: gameOverPanel
@@ -6333,6 +6349,10 @@ PrefabInstance:
     - target: {fileID: 243590267965746907, guid: 830c6f4d87d799d4cbf97caeddc610a3, type: 3}
       propertyPath: m_Name
       value: MosquitoVerde
+      objectReference: {fileID: 0}
+    - target: {fileID: 4287588530952651600, guid: 830c6f4d87d799d4cbf97caeddc610a3, type: 3}
+      propertyPath: m_SortingOrder
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 8589994181243022446, guid: 830c6f4d87d799d4cbf97caeddc610a3, type: 3}
       propertyPath: m_LocalPosition.x

@@ -3,13 +3,12 @@ using UnityEngine.SceneManagement;
 
 public class Portal : MonoBehaviour
 {
-    public string novaFase;
-
     private void OnTriggerEnter2D(Collider2D other)
     {
         if (other.CompareTag("Player"))
         {
-            SceneManager.LoadScene("novaFase");
+            int proximaCena = SceneManager.GetActiveScene().buildIndex + 1;
+            SceneManager.LoadScene(proximaCena);
         }
     }
 }
